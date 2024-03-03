@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+            border: 2px solid orangered;
+            border-radius: 5px;
+            margin:auto ;
+            margin-top: 125px;
+            background-color: pink;
+        }
+        #yas{
+            margin-top: 45px;
+            margin-left: 25px;
+        }
+        #buton{
+            margin-top: 15px;
+            margin-left: 75px;
+            background-color: red;
+        }
+        #sonuc{
+            font-size: 22px;
+            font-style: italic;
+            color: rgb(29, 29, 228);
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <input type="number" id="yas">
+        <p id="sonuc"></p>
+        <button id="buton">GÖNDER</button>
+    </div>
+     <script>
+        let buton = document.getElementById("buton");
+        let sonuc = document.getElementById("sonuc");
+
+        buton.onclick = function(){
+            let yas = Number(document.getElementById("yas").value);
+
+            if(yas< 18 || yas ==18){
+                sonuc.innerHTML="yaşınız 18 den küçük siteye erişiminiz yasak ";
+
+
+            }
+            else{
+                sonuc.innerHTML ="Hosgeldiniz"
+            }
+        }
+     </script>
+</body>
+</html>
